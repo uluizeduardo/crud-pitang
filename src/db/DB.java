@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Properties;
 
 public class DB {
@@ -43,6 +44,16 @@ public class DB {
             try {
                 conect.close();
             } catch (SQLException ex){
+                throw new DbException(ex.getMessage());
+            }
+        }
+    }
+
+    public static void fecharStatment(Statement st){
+        if (st != null){
+            try{
+                st.close();
+            }catch (SQLException ex){
                 throw new DbException(ex.getMessage());
             }
         }
