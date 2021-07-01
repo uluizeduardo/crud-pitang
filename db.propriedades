@@ -1,0 +1,4 @@
+user=root
+password=LdkmZ128401sql
+dburl=jdbc:mysql://localhost:3306/pitang
+useSSL=false
