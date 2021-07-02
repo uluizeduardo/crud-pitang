@@ -7,10 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
@@ -49,7 +46,13 @@ public class LoginViewController implements Initializable {
                 Stage stage = (Stage) node.getScene().getWindow();
                 stage.close();
 
-                Scene novaCena = new  Scene (FXMLLoader.load(getClass().getResource("/gui/TelaPrincipal.fxml")));
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/TelaPrincipal.fxml"));
+                ScrollPane scrollPane = loader.load();
+
+                scrollPane.setFitToWidth(true);
+                scrollPane.setFitToWidth(true);
+
+                Scene novaCena = new Scene(scrollPane);
                 stage.setScene(novaCena);
                 stage.show();
 
