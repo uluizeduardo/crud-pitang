@@ -34,10 +34,10 @@ public class LoginViewController implements Initializable {
     @FXML
     private Button btnEntrar;
 
-    private  static Scene novaCena;
+    private static Scene telaPrincipal;
 
-    public static Scene getNovaCena() {
-        return novaCena;
+    public static Scene getTelaPrincipal() {
+        return telaPrincipal;
     }
 
     //Método que leva para a proxima tela do sistema ao clicar no Botão entrar
@@ -55,11 +55,11 @@ public class LoginViewController implements Initializable {
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/gui/TelaPrincipal.fxml"));
                 ScrollPane scrollPane = loader.load();
 
-                scrollPane.setFitToWidth(true);
+                scrollPane.setFitToHeight(true);
                 scrollPane.setFitToWidth(true);
 
-                novaCena = new Scene(scrollPane);
-                stage.setScene(novaCena);
+                telaPrincipal = new Scene(scrollPane);
+                stage.setScene(telaPrincipal);
                 stage.show();
 
                 }catch (IOException ex){

@@ -10,7 +10,6 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.VBox;
-import sample.Main;
 
 import java.io.IOException;
 import java.net.URL;
@@ -48,7 +47,7 @@ public class MainViewController implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(nomeAbsoluto));
             VBox novoVbox = loader.load();
 
-           Scene novaCena = LoginViewController.getNovaCena();
+            Scene novaCena = LoginViewController.getTelaPrincipal();
             VBox vboxPrincipal  = (VBox) ((ScrollPane) novaCena.getRoot()).getContent();
 
             Node menuPrincipal = vboxPrincipal.getChildren().get(0);
