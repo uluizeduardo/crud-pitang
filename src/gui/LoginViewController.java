@@ -34,6 +34,12 @@ public class LoginViewController implements Initializable {
     @FXML
     private Button btnEntrar;
 
+    private  static Scene novaCena;
+
+    public static Scene getNovaCena() {
+        return novaCena;
+    }
+
     //Método que leva para a proxima tela do sistema ao clicar no Botão entrar
     @FXML
     public void clickBotaoEntrar(MouseEvent event){
@@ -52,7 +58,7 @@ public class LoginViewController implements Initializable {
                 scrollPane.setFitToWidth(true);
                 scrollPane.setFitToWidth(true);
 
-                Scene novaCena = new Scene(scrollPane);
+                novaCena = new Scene(scrollPane);
                 stage.setScene(novaCena);
                 stage.show();
 
