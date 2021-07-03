@@ -12,18 +12,17 @@ public class Usuario {
 
     private String senha;
 
-    private List<String> listTelefone = new ArrayList<>();
+    private List<Contato> telefones = new ArrayList<>();
 
     public Usuario(){
 
     }
 
-    public Usuario(Integer id, String nome, String email, String senha, List<String> listTelefone) {
+    public Usuario(Integer id, String nome, String email, String senha) {
         this.id = id;
         this.nome = nome;
         this.email = email;
         this.senha = senha;
-        this.listTelefone = listTelefone;
     }
 
     public Integer getId() {
@@ -58,8 +57,14 @@ public class Usuario {
         this.senha = senha;
     }
 
-    public List<String> getListTelefone() {
-        return listTelefone;
+    //Metodo para adicionar telefone
+    public void addTelefone(Contato telefone){
+        telefones.add(telefone);
+    }
+
+    //Metodo para remover telefone
+    public void removerTelefone(Contato telefone){
+        telefones.remove(telefone);
     }
 
     @Override
@@ -67,12 +72,12 @@ public class Usuario {
         if (this == o) return true;
         if (!(o instanceof Usuario)) return false;
         Usuario usuario = (Usuario) o;
-        return getId().equals(usuario.getId()) && getNome().equals(usuario.getNome()) && getEmail().equals(usuario.getEmail()) && getSenha().equals(usuario.getSenha()) && getListTelefone().equals(usuario.getListTelefone());
+        return getId().equals(usuario.getId()) && getNome().equals(usuario.getNome()) && getEmail().equals(usuario.getEmail()) && getSenha().equals(usuario.getSenha()) && telefones.equals(usuario.telefones);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getNome(), getEmail(), getSenha(), getListTelefone());
+        return Objects.hash(getId(), getNome(), getEmail(), getSenha(), telefones);
     }
 
     @Override
@@ -82,7 +87,7 @@ public class Usuario {
                 ", nome='" + nome + '\'' +
                 ", email='" + email + '\'' +
                 ", senha='" + senha + '\'' +
-                ", listTelefone=" + listTelefone +
+                ", telefones=" + telefones +
                 '}';
     }
 }

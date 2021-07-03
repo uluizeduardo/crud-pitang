@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -12,48 +13,53 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.LoginViewController">
-   <left>
-      <AnchorPane prefHeight="200.0" prefWidth="350.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="100.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../img/pitang.png" />
-               </image>
-            </ImageView>
-            <Text fill="#d03e35" layoutX="136.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pitang">
-               <font>
-                  <Font size="25.0" />
-               </font>
-            </Text>
-         </children>
-      </AnchorPane>
-   </left>
-   <right>
-      <AnchorPane prefHeight="200.0" prefWidth="400.0" style="-fx-background-color: #D03E35;" BorderPane.alignment="CENTER">
-         <children>
-            <TextField fx:id="txtEmail" layoutX="59.0" layoutY="205.0" prefHeight="30.0" prefWidth="250.0" promptText="Email" style="-fx-background-color: #ffffff;">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </TextField>
-            <PasswordField fx:id="txtSenha" layoutX="58.0" layoutY="250.0" prefHeight="30.0" prefWidth="250.0" promptText="Senha" style="-fx-background-color: #ffffff;">
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </PasswordField>
-            <Button fx:id="btnEntrar" layoutX="108.0" layoutY="317.0" mnemonicParsing="false" onMouseClicked="#clickBotaoEntrar" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: #ffffff;" text="Entrar" textFill="#d30e35" />
-            <Text fill="WHITE" layoutX="104.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Login" textAlignment="CENTER" wrappingWidth="141.29931640625">
-               <font>
-                  <Font size="25.0" />
-               </font>
-            </Text>
-            <Label fx:id="lblErrors" layoutX="59.0" layoutY="291.0" prefHeight="16.0" prefWidth="248.0" textAlignment="CENTER" textFill="WHITE">
-               <font>
-                  <Font size="10.0" />
-               </font>
-            </Label>
-         </children>
-      </AnchorPane>
-   </right>
-</BorderPane>
+
+<ScrollPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.LoginViewController">
+   <content>
+      <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0">
+         <left>
+            <AnchorPane prefHeight="200.0" prefWidth="350.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="100.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/pitang.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#d03e35" layoutX="136.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pitang">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </left>
+         <right>
+            <AnchorPane prefHeight="200.0" prefWidth="400.0" style="-fx-background-color: #D03E35;" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="txtEmail" layoutX="59.0" layoutY="205.0" prefHeight="30.0" prefWidth="250.0" promptText="Email" style="-fx-background-color: #ffffff;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </TextField>
+                  <PasswordField fx:id="txtSenha" layoutX="58.0" layoutY="250.0" prefHeight="30.0" prefWidth="250.0" promptText="Senha" style="-fx-background-color: #ffffff;">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </PasswordField>
+                  <Button fx:id="btnEntrar" layoutX="108.0" layoutY="317.0" mnemonicParsing="false" onMouseClicked="#clickBotaoEntrar" prefHeight="36.0" prefWidth="150.0" style="-fx-background-color: #ffffff;" text="Entrar" textFill="#d30e35" />
+                  <Text fill="WHITE" layoutX="104.0" layoutY="116.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Login" textAlignment="CENTER" wrappingWidth="141.29931640625">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="lblErrors" layoutX="59.0" layoutY="291.0" prefHeight="16.0" prefWidth="248.0" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="10.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </right>
+      </BorderPane>
+   </content>
+</ScrollPane>

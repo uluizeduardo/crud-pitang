@@ -5,9 +5,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Stage;
 import model.entidades.Usuario;
-import sample.Main;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -29,7 +27,6 @@ public class UsuarioListController implements Initializable {
     @FXML
     private TableColumn<Usuario, String> colunaTelefone;
 
-
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         IniciarDadosDaTabela();
@@ -38,6 +35,5 @@ public class UsuarioListController implements Initializable {
     public void IniciarDadosDaTabela(){
         colunaId.setCellValueFactory(new PropertyValueFactory<>("id"));
         colunaNome.setCellValueFactory(new PropertyValueFactory<>("Nome"));
-
     }
 }

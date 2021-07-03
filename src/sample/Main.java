@@ -11,7 +11,7 @@ import java.io.IOException;
 
 public class Main extends Application {
 
-    private static Scene telaLogin;
+    private static Scene cenaPrincipal;
 
     @Override
     public void start(Stage primaryStage) {
@@ -20,8 +20,8 @@ public class Main extends Application {
             Parent parent = loader.load();
 
 
-            telaLogin = new Scene(parent);
-            primaryStage.setScene(telaLogin);
+            cenaPrincipal = new Scene(parent);
+            primaryStage.setScene(cenaPrincipal);
             primaryStage.initStyle(StageStyle.UNIFIED);
             primaryStage.setTitle("Pitang");
             primaryStage.show();
@@ -31,8 +31,8 @@ public class Main extends Application {
         }
     }
 
-    public static Scene getTelaLogin(){
-        return telaLogin;
+    public static Scene getCenaPrincipal(){
+        return cenaPrincipal;
     }
 
     public static void main(String[] args) {
